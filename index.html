@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tools</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* for quick access to these specific pproperities dont mind. */
+    header div:first-child {
+      font-weight: bold;
+      letter-spacing: 0.5px
+    }
+
+    .status-bar {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666
+    }
+
+    .panel div {
+      color: #444;
+      font-size: 13px
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>vure_box</div>
+    <div>
+      <span id="clock">00:00:00</span> | up: <span id="uptime" class="accent">0s</span>
+    </div>
+  </header>
+
+  <nav id="tabs">
+    <button class="active" data-target="scratch">notes</button>
+    <button data-target="json">json</button>
+    <button data-target="b64">base64</button>
+  </nav>
+
+  <main>
+    <section id="scratch" class="panel active">
+      <textarea id="pad" placeholder="write note"></textarea>
+      <div class="status-bar">char: <span id="char-count">0</span></div>
+    </section>
+
+    <section id="json" class="panel">
+      <div>todo</div>
+    </section>
+
+    <section id="b64" class="panel">
+      <div>todo</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
