@@ -96,6 +96,54 @@ textarea:focus {
     outline: 1px solid #384232;
 }
 
+input {
+    background: #020302;
+    color: #a8a599;
+    border: 1px solid #191c19;
+    padding: 6px 10px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+input:focus {
+    outline: 1px solid #384232;
+}
+
+#api-url {
+    flex: 1;
+}
+
+select {
+    background: #0b0d0b;
+    color: #9e9c91;
+    border: 1px solid #191c19;
+    padding: 6px 8px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: 1px solid #384232;
+}
+
+#api-headers {
+    height: 55px;
+    margin-bottom: 8px;
+}
+
+#api-body {
+    display: none;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+#api-out {
+    height: 160px;
+}
+
 #b64-in {
     height: 140px;
 }

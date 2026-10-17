@@ -31,6 +31,7 @@
   <header>
     <div>vure_box</div>
     <div>
+      <!--to keep track of time (i acknowledge this is useless)-->
       <span id="clock">00:00:00</span> | up: <span id="uptime" class="accent">0s</span>
     </div>
   </header>
@@ -39,11 +40,13 @@
     <button class="active" data-target="scratch">notes</button>
     <button data-target="json">json</button>
     <button data-target="b64">base64</button>
+    <button data-target="req">fetch</button>
   </nav>
 
   <main>
     <section id="scratch" class="panel active">
       <textarea id="pad" placeholder="write note"></textarea>
+      <!--idk why i added char count tbh-->
       <div class="status-bar">char: <span id="char-count">0</span></div>
     </section>
 
@@ -64,6 +67,25 @@
       </div>
       <textarea id="b64-in" placeholder="base64 string"></textarea>
       <textarea id="b64-out" placeholder="result"></textarea>
+    </section>
+
+    <section id="req" class="panel">
+      <div class="toolbar">
+        <select id="api-method">
+          <option>GET</option>
+          <option>POST</option>
+          <option>PUT</option>
+          <option>DELETE</option>
+        </select>
+        <input id="api-url" value="https://httpbin.org/get" placeholder="https://api...">
+        <!--default link (useful for testing)-->
+        <button id="btn-send">fetch</button>
+        <button id="btn-to-json">to json</button>
+        <span id="api-status" class="msg"></span>
+      </div>
+      <textarea id="api-headers" placeholder="headers (one per line, e.g. Authorization: Bearer ...)"></textarea>
+      <textarea id="api-body" placeholder="request body (for POST/PUT)"></textarea>
+      <textarea id="api-out" placeholder="response body"></textarea>
     </section>
   </main>
 

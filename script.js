@@ -10,6 +10,12 @@ const charcnt = document.getElementById('char-count');
 const b_in = document.getElementById("b64-in")
 const b_out = document.getElementById("b64-out")
 const b_stat = document.getElementById('b64-status')
+const a_url = document.getElementById("api-url")
+const a_out = document.getElementById("api-out")
+const a_stat = document.getElementById("api-status")
+const a_method = document.getElementById("api-method")
+const a_headers = document.getElementById("api-headers")
+const a_body = document.getElementById("api-body")
 ////////////////////////////
 
 let sec = 0
@@ -106,4 +112,37 @@ document.getElementById('btn-dec').onclick = () => {
         b_stat.innerText = "invalid b64"
         b_stat.style.color = "#8c4a44"
     }
+}
+
+// toggle body box on mehtod change
+a_method.onchange = () => {
+    a_body.style.display = (a_method.value == 'POST' || a_method.value == 'PUT') ? 'block' : 'none'
+}
+
+document.getElementById('btn-send').onclick = async () => {
+    let u = a_url.value.trim()
+    if (!u) return;
+    a_stat.innerText = "...";
+
+    let opt = { method: a_method.value, headers: {} }
+
+    a_headers.value.split('\n').forEach(l => {
+        let p = l.split(':')
+        if (p[1]) opt.headers[p[0].trim()] = p.slice(1).join(':').trim();
+    })
+
+    if (a_method.value != 'GET') opt.body = a_body.value;
+
+    try {
+        let res = await fetch(u, opt);
+        a_stat.innerText = res.status;
+        a_out.value = await res.text();
+    } catch (e) {
+        a_stat.innerText = "err";;
+    }
+}
+
+document.getElementById('btn-to-json').onclick = () => {
+    jbox.value = a_out.value
+    document.querySelector('button[data-target="json"]').click()
 }
