@@ -7,6 +7,9 @@ const jbox = document.getElementById("json-box")
 const jstat = document.getElementById('json-status')
 const pad = document.getElementById("pad");
 const charcnt = document.getElementById('char-count');
+const b_in = document.getElementById("b64-in")
+const b_out = document.getElementById("b64-out")
+const b_stat = document.getElementById('b64-status')
 ////////////////////////////
 
 let sec = 0
@@ -78,5 +81,29 @@ document.getElementById('btn-min').onclick = () => {
     } catch (e) {
         jstat.innerText = "bad json"
         jstat.style.color = "#8c4a44"
+    }
+}
+
+document.getElementById('btn-enc').onclick = () => {
+    //thank you js for having a built-in function for base64
+    try {
+        b_out.value = btoa(b_in.value)
+        b_stat.innerText = "ok"
+        b_stat.style.color = "#69825b"
+    } catch (e) {
+        // console.log(e)
+        b_stat.innerText = "encode err"
+        b_stat.style.color = "#8c4a44"
+    }
+}
+
+document.getElementById('btn-dec').onclick = () => {
+    try {
+        b_out.value = atob(b_in.value.trim())
+        b_stat.innerText = "ok"
+        b_stat.style.color = "#69825b"
+    } catch (e) {
+        b_stat.innerText = "invalid b64"
+        b_stat.style.color = "#8c4a44"
     }
 }

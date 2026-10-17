@@ -96,6 +96,15 @@ textarea:focus {
     outline: 1px solid #384232;
 }
 
+#b64-in {
+    height: 140px;
+}
+
+#b64-out {
+    height: 70px;
+    margin-top: 8px;
+}
+
 .status-bar {
     margin-top: 10px;
     font-size: 12px;
