@@ -1,6 +1,4 @@
 //dom elements
-const clk = document.getElementById("clock");
-const upt = document.getElementById('uptime');
 const btns = document.querySelectorAll("#tabs button");
 const panels = document.querySelectorAll('.panel');
 const jbox = document.getElementById("json-box")
@@ -17,24 +15,6 @@ const a_method = document.getElementById("api-method")
 const a_headers = document.getElementById("api-headers")
 const a_body = document.getElementById("api-body")
 ////////////////////////////
-
-let sec = 0
-
-function tick() {
-    let d = new Date()
-    // console.log(d.toTimeString())
-    clk.innerText = d.toTimeString().split(' ')[0]
-}
-tick();
-setInterval(tick, 1000)
-
-setInterval(() => {
-    sec++
-    if (sec < 60) upt.innerText = sec + "s"
-    else {
-        upt.innerText = Math.floor(sec / 60) + "m " + (sec % 60) + "s";
-    }
-}, 1000)
 
 
 btns.forEach(b => {

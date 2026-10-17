@@ -9,17 +9,31 @@ body {
     background: #050605;
     color: #9e9c91;
     font-family: "Courier New", Courier, monospace;
-    padding: 24px;
+    max-width: 880px;
+    margin: 40px auto;
+    padding: 0 20px;
     line-height: 1.4;
+    font-size: 14px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #191c19;
     padding-bottom: 12px;
     margin-bottom: 20px;
     font-size: 14px;
+}
+
+.gh-link {
+    color: #555c52;
+    display: inline-flex;
+    align-items: center;
+}
+
+.gh-link:hover {
+    color: #9e9c91;
 }
 
 .accent {
