@@ -118,7 +118,7 @@ document.getElementById('btn-send').onclick = async () => {
         a_stat.innerText = res.status;
         a_out.value = await res.text();
     } catch (e) {
-        a_stat.innerText = "err";;
+        a_stat.innerText = "err";
     }
 }
 

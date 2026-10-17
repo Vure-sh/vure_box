@@ -9,11 +9,11 @@ body {
     background: #050605;
     color: #9e9c91;
     font-family: "Courier New", Courier, monospace;
-    max-width: 880px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.4;
-    font-size: 14px;
+    max-width: 1060px;
+    margin: 48px auto;
+    padding: 0 24px;
+    line-height: 1.5;
+    font-size: 16px;
 }
 
 header {
@@ -21,19 +21,25 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #191c19;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    font-size: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .gh-link {
-    color: #555c52;
+    color: #888;
     display: inline-flex;
     align-items: center;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .gh-link:hover {
-    color: #9e9c91;
+    color: #c0bcb0;
 }
 
 .accent {
@@ -42,13 +48,13 @@ header {
 
 .dim {
     color: #3f453c;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 nav {
     display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 10px;
+    margin-bottom: 24px;
 }
 
 /* buttons */
@@ -56,9 +62,9 @@ button {
     background: #0b0d0b;
     color: #555c52;
     border: 1px solid #191c19;
-    padding: 6px 14px;
+    padding: 9px 18px;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -79,14 +85,14 @@ button:active {
 }
 
 .btn-sm {
-    padding: 3px 8px;
-    font-size: 11px;
+    padding: 5px 12px;
+    font-size: 13px;
 }
 
 .panel {
     display: none;
     border: 1px solid #191c19;
-    padding: 16px;
+    padding: 22px;
     background: #080908;
 }
 
@@ -96,13 +102,14 @@ button:active {
 
 textarea {
     width: 100%;
-    height: 220px;
+    height: 380px;
     background: #020302;
     color: #a8a599;
     border: 1px solid #191c19;
-    padding: 10px;
+    padding: 14px;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 1.5;
     resize: vertical;
 }
 
@@ -114,9 +121,9 @@ input {
     background: #020302;
     color: #a8a599;
     border: 1px solid #191c19;
-    padding: 6px 10px;
+    padding: 9px 14px;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 15px;
     outline: none;
 }
 
@@ -132,9 +139,9 @@ select {
     background: #0b0d0b;
     color: #9e9c91;
     border: 1px solid #191c19;
-    padding: 6px 8px;
+    padding: 9px 12px;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 15px;
     outline: none;
     cursor: pointer;
 }
@@ -144,32 +151,32 @@ select:focus {
 }
 
 #api-headers {
-    height: 55px;
-    margin-bottom: 8px;
+    height: 85px;
+    margin-bottom: 12px;
 }
 
 #api-body {
     display: none;
-    height: 70px;
-    margin-bottom: 8px;
+    height: 120px;
+    margin-bottom: 12px;
 }
 
 #api-out {
-    height: 160px;
+    height: 280px;
 }
 
 #b64-in {
-    height: 140px;
+    height: 200px;
 }
 
 #b64-out {
-    height: 70px;
-    margin-top: 8px;
+    height: 120px;
+    margin-top: 12px;
 }
 
 .status-bar {
-    margin-top: 10px;
-    font-size: 12px;
+    margin-top: 14px;
+    font-size: 14px;
     color: #4a5246;
     display: flex;
     justify-content: space-between;
@@ -178,12 +185,12 @@ select:focus {
 
 .toolbar {
     display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+    gap: 10px;
+    margin-bottom: 16px;
     align-items: center;
 }
 
 .msg {
-    font-size: 12px;
-    margin-left: 6px;
+    font-size: 14px;
+    margin-left: 8px;
 }
