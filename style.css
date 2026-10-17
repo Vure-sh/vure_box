@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #0a0a0a;
-    color: #d4d4d4;
+    background: #050605;
+    color: #9e9c91;
     font-family: "Courier New", Courier, monospace;
     padding: 24px;
     line-height: 1.4;
@@ -16,18 +16,18 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid #191c19;
     padding-bottom: 12px;
     margin-bottom: 20px;
     font-size: 14px;
 }
 
 .accent {
-    color: #ffb000;
+    color: #69785e;
 }
 
 .dim {
-    color: #555;
+    color: #3f453c;
     font-size: 11px;
 }
 
@@ -39,9 +39,9 @@ nav {
 
 /* buttons */
 button {
-    background: #111;
-    color: #888;
-    border: 1px solid #2a2a2a;
+    background: #0b0d0b;
+    color: #555c52;
+    border: 1px solid #191c19;
     padding: 6px 14px;
     font-family: inherit;
     font-size: 13px;
@@ -49,15 +49,14 @@ button {
 }
 
 button.active {
-    color: #ffb000;
-    border-color: #ffb000;
-    background: #16130d;
+    color: #b5b19e;
+    border-color: #3a4235;
+    background: #111410;
 }
 
 button:hover {
-    color: #ffb000;
-    border-color: #ffb000;
-    background: #16130d;
+    color: #92998a;
+    border-color: #2b3327;
 }
 
 button:active {
@@ -72,9 +71,9 @@ button:active {
 
 .panel {
     display: none;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #191c19;
     padding: 16px;
-    background: #0e0e0e;
+    background: #080908;
 }
 
 .panel.active {
@@ -84,9 +83,9 @@ button:active {
 textarea {
     width: 100%;
     height: 220px;
-    background: #060606;
-    color: #e0e0e0;
-    border: 1px solid #2a2a2a;
+    background: #020302;
+    color: #a8a599;
+    border: 1px solid #191c19;
     padding: 10px;
     font-family: inherit;
     font-size: 13px;
@@ -94,13 +93,13 @@ textarea {
 }
 
 textarea:focus {
-    outline: 1px solid #ffb000;
+    outline: 1px solid #384232;
 }
 
 .status-bar {
     margin-top: 10px;
     font-size: 12px;
-    color: #666;
+    color: #4a5246;
     display: flex;
     justify-content: space-between;
     align-items: center;

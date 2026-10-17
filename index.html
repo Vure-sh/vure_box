@@ -48,11 +48,22 @@
     </section>
 
     <section id="json" class="panel">
-      <div>todo</div>
+      <div class="toolbar">
+        <button id="btn-fmt">format</button>
+        <button id="btn-min">minify</button>
+        <span id="json-status" class="msg"></span>
+      </div>
+      <textarea id="json-box" placeholder="paste json"></textarea>
     </section>
 
     <section id="b64" class="panel">
-      <div>todo</div>
+      <div class="toolbar">
+        <button id="btn-enc">encode</button>
+        <button id="btn-dec">decode</button>
+        <span id="b64-status" class="msg"></span>
+      </div>
+      <textarea id="b64-in" placeholder="base64 string"></textarea>
+      <textarea id="b64-out" placeholder="result"></textarea>
     </section>
   </main>
 
