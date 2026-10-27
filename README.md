@@ -2,7 +2,13 @@
 
 a small tool for things i use every day. made this for hackclub #3am because postman is way too slow when all you want to do is test a quick link or clean up some json at night.
 
-![demo](assets/screenshot.png)
+### screenshots
+
+| notes | json |
+| :---: | :---: |
+| ![notes](assets/notes.png) | ![json](assets/json.png) |
+| **base64** | **fetch** |
+| ![base64](assets/base64.png) | ![fetch](assets/fetch.png) |
 
 ### live site
 https://vure-sh.github.io/vure_box/
