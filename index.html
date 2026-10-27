@@ -4,41 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tools</title>
+  <title>v_box</title>
+  <link rel="icon" type="image/png" href="assets/ghost.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* for quick access to these specific pproperities dont mind. */
-    header div:first-child {
-      font-weight: bold;
-      letter-spacing: 0.5px
-    }
-
-    .status-bar {
-      margin-top: 14px;
-      font-size: 14px;
-      color: #666
-    }
-
-    .panel div {
-      color: #444;
-      font-size: 15px
-    }
-  </style>
 </head>
 
 <body>
 
   <header>
-    <div>vure_box</div>
-    <a href="https://github.com/Vure-sh/vure_box" target="_blank" class="gh-link"><i class="fa-brands fa-github"></i></a>
+    <div class="logo">
+      <img src="assets/ghost.png" alt="ghost" class="ghost-mascot">
+      <span class="logo-title">v_box</span>
+    </div>
+    <div class="header-links">
+      <a href="https://github.com/Vure-sh/vure_box" target="_blank" class="gh-link" title="github repository"><span
+          class="gh-halloween"><i class="fa-solid fa-hat-wizard hat"></i><i class="fa-brands fa-github"></i></span></a>
+    </div>
   </header>
 
   <nav id="tabs">
-    <button class="active" data-target="scratch">notes</button>
-    <button data-target="json">json</button>
-    <button data-target="b64">base64</button>
-    <button data-target="req">fetch</button>
+    <div class="tab-group">
+      <button class="active" data-target="scratch">notes</button>
+      <button data-target="json">json</button>
+      <button data-target="b64">base64</button>
+      <button data-target="req">fetch</button>
+    </div>
+    <img src="assets/pumpkin.png" alt="pumpkin" class="pumpkin-deco">
   </nav>
 
   <main>

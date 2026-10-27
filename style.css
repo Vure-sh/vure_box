@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #050605;
-    color: #9e9c91;
+    background: #08060b;
+    color: #dcd4c7;
     font-family: "Courier New", Courier, monospace;
     max-width: 1060px;
     margin: 48px auto;
@@ -20,10 +20,28 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #191c19;
+    border-bottom: 1px solid #241933;
     padding-bottom: 16px;
     margin-bottom: 24px;
     font-size: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ghost-mascot {
+    height: 28px;
+    width: auto;
+    user-select: none;
+}
+
+.logo-title {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #f3efe6;
 }
 
 a {
@@ -31,52 +49,84 @@ a {
 }
 
 .gh-link {
-    color: #888;
+    color: #8c8099;
     display: inline-flex;
     align-items: center;
     font-size: 20px;
     text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.gh-halloween {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.gh-halloween .hat {
+    position: absolute;
+    top: -8px;
+    left: -4px;
+    font-size: 13px;
+    color: #ff7700;
+    transform: rotate(-22deg);
 }
 
 .gh-link:hover {
-    color: #c0bcb0;
+    color: #ff8800;
 }
 
 .accent {
-    color: #69785e;
+    color: #ff7700;
 }
 
 .dim {
-    color: #3f453c;
+    color: #635773;
     font-size: 13px;
 }
 
 nav {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 24px;
+}
+
+.tab-group {
+    display: flex;
+    gap: 10px;
+}
+
+.pumpkin-deco {
+    height: 48px;
+    width: auto;
+    user-select: none;
+    filter: drop-shadow(0 2px 8px rgba(255, 119, 0, 0.35));
 }
 
 /* buttons */
 button {
-    background: #0b0d0b;
-    color: #555c52;
-    border: 1px solid #191c19;
+    background: #100b19;
+    color: #8a7e9c;
+    border: 1px solid #251936;
     padding: 9px 18px;
     font-family: inherit;
     font-size: 15px;
     cursor: pointer;
+    transition: all 120ms ease;
 }
 
 button.active {
-    color: #b5b19e;
-    border-color: #3a4235;
-    background: #111410;
+    color: #ff9933;
+    border-color: #ff7700;
+    background: #1e1129;
+    box-shadow: 0 0 12px rgba(255, 119, 0, 0.25);
 }
 
 button:hover {
-    color: #92998a;
-    border-color: #2b3327;
+    color: #ffb366;
+    border-color: #663d1a;
+    background: #171024;
 }
 
 button:active {
@@ -91,9 +141,10 @@ button:active {
 
 .panel {
     display: none;
-    border: 1px solid #191c19;
+    border: 1px solid #241933;
     padding: 22px;
-    background: #080908;
+    background: #0e0a16;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 .panel.active {
@@ -103,9 +154,9 @@ button:active {
 textarea {
     width: 100%;
     height: 380px;
-    background: #020302;
-    color: #a8a599;
-    border: 1px solid #191c19;
+    background: #050308;
+    color: #ded7cc;
+    border: 1px solid #231733;
     padding: 14px;
     font-family: inherit;
     font-size: 15px;
@@ -114,13 +165,15 @@ textarea {
 }
 
 textarea:focus {
-    outline: 1px solid #384232;
+    outline: none;
+    border-color: #ff7700;
+    box-shadow: 0 0 8px rgba(255, 119, 0, 0.22);
 }
 
 input {
-    background: #020302;
-    color: #a8a599;
-    border: 1px solid #191c19;
+    background: #050308;
+    color: #ded7cc;
+    border: 1px solid #231733;
     padding: 9px 14px;
     font-family: inherit;
     font-size: 15px;
@@ -128,7 +181,9 @@ input {
 }
 
 input:focus {
-    outline: 1px solid #384232;
+    outline: none;
+    border-color: #ff7700;
+    box-shadow: 0 0 8px rgba(255, 119, 0, 0.22);
 }
 
 #api-url {
@@ -136,9 +191,9 @@ input:focus {
 }
 
 select {
-    background: #0b0d0b;
-    color: #9e9c91;
-    border: 1px solid #191c19;
+    background: #100b19;
+    color: #dcd4c7;
+    border: 1px solid #251936;
     padding: 9px 12px;
     font-family: inherit;
     font-size: 15px;
@@ -147,7 +202,9 @@ select {
 }
 
 select:focus {
-    outline: 1px solid #384232;
+    outline: none;
+    border-color: #ff7700;
+    box-shadow: 0 0 8px rgba(255, 119, 0, 0.22);
 }
 
 #api-headers {
@@ -177,10 +234,14 @@ select:focus {
 .status-bar {
     margin-top: 14px;
     font-size: 14px;
-    color: #4a5246;
+    color: #6a5d7c;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.status-bar span {
+    color: #ff9933;
 }
 
 .toolbar {
@@ -193,4 +254,5 @@ select:focus {
 .msg {
     font-size: 14px;
     margin-left: 8px;
+    font-weight: bold;
 }

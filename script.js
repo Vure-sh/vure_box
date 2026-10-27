@@ -50,11 +50,11 @@ document.getElementById('btn-fmt').onclick = () => {
         jbox.value = JSON.stringify(raw, null, 2);
 
         jstat.innerText = "ok"
-        jstat.style.color = "#69825b"
+        jstat.style.color = "#4ef037"
     } catch (e) {
         // console.log(e.message)
         jstat.innerText = "bad json"
-        jstat.style.color = "#8c4a44"
+        jstat.style.color = "#ff4444"
     }
 }
 
@@ -63,10 +63,10 @@ document.getElementById('btn-min').onclick = () => {
         let raw = JSON.parse(jbox.value)
         jbox.value = JSON.stringify(raw);
         jstat.innerText = "ok"
-        jstat.style.color = "#69825b"
+        jstat.style.color = "#4ef037"
     } catch (e) {
         jstat.innerText = "bad json"
-        jstat.style.color = "#8c4a44"
+        jstat.style.color = "#ff4444"
     }
 }
 
@@ -75,11 +75,11 @@ document.getElementById('btn-enc').onclick = () => {
     try {
         b_out.value = btoa(b_in.value)
         b_stat.innerText = "ok"
-        b_stat.style.color = "#69825b"
+        b_stat.style.color = "#4ef037"
     } catch (e) {
         // console.log(e)
         b_stat.innerText = "encode err"
-        b_stat.style.color = "#8c4a44"
+        b_stat.style.color = "#ff4444"
     }
 }
 
@@ -87,10 +87,10 @@ document.getElementById('btn-dec').onclick = () => {
     try {
         b_out.value = atob(b_in.value.trim())
         b_stat.innerText = "ok"
-        b_stat.style.color = "#69825b"
+        b_stat.style.color = "#4ef037"
     } catch (e) {
         b_stat.innerText = "invalid b64"
-        b_stat.style.color = "#8c4a44"
+        b_stat.style.color = "#ff4444"
     }
 }
 
@@ -103,6 +103,7 @@ document.getElementById('btn-send').onclick = async () => {
     let u = a_url.value.trim()
     if (!u) return;
     a_stat.innerText = "...";
+    a_stat.style.color = "#ffaa00";
 
     let opt = { method: a_method.value, headers: {} }
 
@@ -116,9 +117,11 @@ document.getElementById('btn-send').onclick = async () => {
     try {
         let res = await fetch(u, opt);
         a_stat.innerText = res.status;
+        a_stat.style.color = res.ok ? "#4ef037" : "#ff4444";
         a_out.value = await res.text();
     } catch (e) {
         a_stat.innerText = "err";
+        a_stat.style.color = "#ff4444";
     }
 }
 
