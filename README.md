@@ -61,9 +61,5 @@ just download the repo and open `index.html` in your browser. that's it.
 
 ### dev notes & tooling
 - coded manually in vscode (html/css/vanilla js)
-- used gemini as a rubber duck to debug some fetch header parsing and look up base64 functions (`btoa`/`atob`)
 
 ---
-
-### who is json?
-a guy that gets sent with each call //sorry for the bad joke lol
